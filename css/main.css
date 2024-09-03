@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: 'Liberation Sans', sans-serif;
   text-decoration: none !important;
+  list-style: none;
 }
 
 body {
@@ -500,6 +501,26 @@ main {
   height: 132px;
 
 }
+
+/* directory/instagram */
+
+.filter_boxs{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.filter_boxs .sale {
+  background: #393939;
+  color: #fff;
+  padding: 6px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* directory/instagram end*/
 
 footer {
   padding: 30px 0 40px 0;
