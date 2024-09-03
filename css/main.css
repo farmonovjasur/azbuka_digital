@@ -1,0 +1,520 @@
+@import url('https://fonts.cdnfonts.com/css/liberation-sans');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Liberation Sans', sans-serif;
+  text-decoration: none !important;
+}
+
+body {
+  position: relative;
+}
+
+h1,h2,h3,p {
+  margin: 0;
+}
+
+h1,h2,h3 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+.container {
+  max-width: 1440px;
+}
+
+
+:root {
+  --primary: #3B4DBE;
+  --black: #000;
+  --secondary: #909090;
+  --purple: #9C01A2;
+}
+
+/* header */
+
+header {
+  position: relative;
+  z-index: 2;
+}
+
+.navbar {
+  background: rgb(59,77,190);
+  background: linear-gradient(132deg, rgba(59,77,190,1) 0%, rgba(5,137,220,1) 100%);
+  padding: 20px 0;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-weight: 600;
+}
+
+.navbar-brand:hover {
+  color: #f7f1f1;
+}
+
+.collapse form {
+  width: 76%;
+}
+
+.search {
+  padding: 10px 10px;
+}
+
+.navbar-toggler {
+  border: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.burger_menu {
+  margin-right: 20px;
+  border: 1px solid #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.burger {
+    width: 32px;
+    height: 24px;
+    background: transparent;
+    border: 0;
+    padding: 4px;
+}
+
+.burger span {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 12px;
+    display: block;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.burger span::before,
+.burger span::after {
+    content: "";
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    transition: all 0.5s ease-in-out;
+    border-radius: 12px;
+    height: 4px;
+}
+
+.burger span::before {
+    transform: translateY(-10px);
+
+}
+
+.burger span::after {
+    transform: translateY(10px);
+    margin-top: -4px;
+}
+
+
+.burger.active span {
+    background-color: transparent;
+}
+
+.burger.active span::before {
+    transform: rotateZ(45deg) translateY(0);
+}
+
+.burger.active span::after {
+    transform: rotateZ(-45deg) translateY(0);
+}
+
+.nav-link {
+  text-align: center;
+}
+
+.nav-link p {
+  margin: 0;
+  color: #fff;
+}
+
+.sidebar, .nested-sidebar {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 130px;
+    z-index: 1;
+}
+
+.sidebar img {
+    margin-right: 6px;
+}
+
+.sidebar a, .nested-sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #242424;
+    display: block;
+    transition: 0.3s;
+    border-radius: 6px;
+}
+
+.bi-chevron-right {
+    float: right;
+    display: none;
+    margin-top: 5px;
+}
+
+.sidebar a:hover,
+.nested-sidebar a:hover {
+    background-color: #EBF0FF;
+}
+
+.sidebar a:hover .bi-chevron-right {
+    display: block;
+}
+
+.nested-sidebar {
+    left: 324px; /* Position nested sidebars to the right of the main sidebar */
+    background-color: #f8f8f8;
+    padding-left: 20px;
+    z-index: 1;
+    opacity: 0;
+}
+
+.nested-sidebar h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+#nested-content1, #newContent1, #newContent2, #newContent3 {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.new_content h3 {
+  font-size: 20px;
+}
+
+.next {
+  border: 0;
+  margin-bottom: 10px;
+}
+
+.next:hover {
+  color: var(--secondary);
+}
+
+
+/* main*/ 
+
+main {
+  padding: 36px 0 160px 0;
+}
+
+.banner {
+  background-image: url(../img/banner.png);
+  height: 168px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0px 0px 20px 0px;
+}
+
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.product .card {
+  width: 215px;
+  height: 430px;
+  border: 0;
+  transition: 0.2s;
+}
+
+.chosen {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: 0;
+  background: transparent;
+}
+
+.chosen svg {
+  fill: rgba(206, 202, 202, 0.4);
+  stroke: #646464;
+  stroke-linecap: 2px;
+}
+
+.discount {
+  position: absolute;
+  padding-left: 10px;
+  bottom: 154px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 3px;
+}
+
+.discount .col_1, .col_2 {
+  font-size: 14px;
+  color: #fff;
+  padding: 0 4px;
+  border-radius: 6px;
+}
+
+.discount .col_1 {
+  background: var(--purple);
+}
+
+.discount .col_2 {
+  background: linear-gradient(132deg, rgba(59,77,190,1) 0%, rgba(5,137,220,1) 100%);
+}
+
+
+.product .card .card-img-top {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card_top .card_price {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.card_top .card_price span {
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: line-through;
+  color: var(--secondary);
+}
+
+.card_top .card_text {
+  font-size: 14px;
+  color: var(--black);
+}
+
+.card_top .card_text span {
+  color: var(--secondary);
+}
+
+.card_bottom {
+  margin-top: 10px;
+}
+
+.card_bottom .btn {
+  background: var(--primary);
+  font-size: 14px;
+  width: 100%;
+  color: #fff;
+}
+
+.card_bottom .btn img {
+  margin-right: 10px;
+  width: 16px;
+}
+
+/* product pages */
+
+.product_page {
+  padding: 30px 0;
+}
+
+.product_banner img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.top_title {
+  color: var(--secondary);
+  font-size: 16px;
+  padding: 20px 0 30px 0;
+}
+
+.course-info .box-1 h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.course-details {
+    margin: 20px 0;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.label {
+    font-weight: bold;
+    color: #666;
+}
+
+.dots {
+    flex-grow: 1;
+    margin: 0 10px;
+    border-bottom: 3px dashed #ccc;
+}
+
+.value {
+    font-weight: bold;
+    color: #000;
+}
+
+.product_page .box-2 .discount_price{
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: line-through;
+  color: var(--secondary);
+}
+
+.product_page .box-2 .procent {
+  color: #9C01A2;
+  font-size: 12px;
+  background: rgba(156, 1, 162, 0.1);
+  padding: 3px;
+  border-radius: 4px;
+}
+
+
+.orders_btn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 24px;
+  gap: 10px;
+}
+
+.orders_btn .btn {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px;
+}
+
+.orders_btn .buy {
+  background: linear-gradient(132deg, rgba(59,77,190,1) 0%, rgba(5,137,220,1) 100%);
+  color: #fff;
+}
+
+.orders_btn .basket {
+  background: #EBF0FF;
+  color: var(--primary);
+}
+
+/* learn course */
+
+.learn_course {
+  margin: 80px 0;
+}
+
+.learn_course .col-lg-9 .card {
+  width: 337px;
+  border: 0;
+}
+
+.learn_course .col-lg-9 .card div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  color: #fff;
+  background: linear-gradient(132deg, rgba(59,77,190,1) 0%, rgba(5,137,220,1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.learn_course .col-lg-9 .card p {
+  font-size: 18px;
+  color: #242424;
+}
+
+/* course program */
+.badge {
+  background: linear-gradient(132deg, rgba(59,77,190,1) 0%, rgba(5,137,220,1) 100%);
+  border-radius: 20px;
+}
+
+/* author and course leader */
+.author_course_leader {
+  margin: 100px 0;
+}
+
+/*  */
+
+.author_course_leader .col-lg-7 img {
+  object-fit: contain;
+  width: 100%;
+}
+/* footer */
+.f-title {
+  font-weight: 600;
+}
+
+.f-link {
+  text-decoration: none;
+}
+
+.f-link, .police {
+  color: var(--secondary);
+}
+
+.f-link:hover {
+  color: #646464;
+}
+
+.qr {
+  background-image: url(../img/icon/qrcode.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 132px;
+  height: 132px;
+
+}
+
+footer {
+  padding: 30px 0 40px 0;
+  background: #D3D4DD;
+}
+
+.police {
+  margin-top: 100px;
+}
+
+
+
+/* @media (max-width: 480px) {
+  .navbar-collapse {
+    text-align: center;
+    margin-top: 10px;
+  }
+} */

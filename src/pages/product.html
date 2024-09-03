@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- bootstrap cdn -->
+		<link
+			rel="stylesheet"
+			href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+		/>
+		<!-- css file -->
+		<link rel="stylesheet" href="../../css/main.css" />
+		<title>Product</title>
+	</head>
+	<body>
+		<!-- header -->
+		<header>
+			<nav class="navbar navbar-expand-lg">
+				<div class="container">
+					<a class="navbar-brand" href="#">365skill</a>
+					<div class="burger_menu">
+						<button class="burger" onclick="toggleSidebar()">
+							<span></span>
+						</button>
+					</div>
+					<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span>Войти</span>
+        </button> -->
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<form class="d-flex" role="search">
+							<input
+								class="search form-control me-2"
+								type="search"
+								placeholder="Найти на 365skill"
+								aria-label="Search"
+							/>
+						</form>
+						<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<img src="../../img/icon/user.png" alt="user" />
+									<p>Войти</p>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<img src="../../img/icon/cart.png" alt="cart" />
+									<p>Корзина</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!-- section -->
+		<section class="product_page">
+			<div class="container">
+				<p class="top_title">
+					Главная / Курсы и обучение / SMM - продвижение в соц. сетях /
+					Инстаграм / 3D-дженералист
+				</p>
+				<div class="row">
+					<div class="col-lg-6 product_banner">
+						<img src="../../img/img1.jpg" />
+					</div>
+					<div class="col-lg-6">
+						<div class="row">
+							<div class="col box-1">
+								<h3>Нейросети</h3>
+								<div class="course-details">
+									<div class="detail-item">
+										<span class="label">Артикул</span>
+										<span class="dots"></span>
+										<span class="value">245206876</span>
+									</div>
+									<div class="detail-item">
+										<span class="label">Тип курса</span>
+										<span class="dots"></span>
+										<span class="value">Онлайн-курс</span>
+									</div>
+									<div class="detail-item">
+										<span class="label">Продолжительность</span>
+										<span class="dots"></span>
+										<span class="value">2ч</span>
+									</div>
+									<div class="detail-item">
+										<span class="label">Тема</span>
+										<span class="dots"></span>
+										<span class="value">Нейросети</span>
+									</div>
+								</div>
+								<button
+									class="btn p-0 text-decoration-underline"
+									type="buttonw"
+									data-bs-toggle="offcanvas"
+									data-bs-target="#offcanvasExample"
+									aria-controls="offcanvasExample"
+								>
+									Описание
+								</button>
+							</div>
+							<div class="col box-2">
+								<h3>
+									15 000 ₽ <span class="discount_price mx-2">94.999</span
+									><span class="procent">-93%</span>
+								</h3>
+								<div class="orders_btn">
+									<button type="button" class="btn buy">Купить в 1 клик</button>
+									<button type="button" class="btn basket">В корзину</button>
+								</div>
+								<div
+									class="d-flex aligin-items-center justify-content-center mt-2"
+								>
+									<button
+										type="button"
+										class="btn d-flex aligin-items-center text-secondary"
+									>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="20"
+											height="20"
+											fill="currentColor"
+											class="bi bi-suit-heart me-2"
+											viewBox="0 0 16 16"
+										>
+											<path
+												d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"
+											/>
+										</svg>
+										В избранное
+									</button>
+									<button
+										type="button"
+										class="btn d-flex aligin-items-center text-secondary"
+									>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="20"
+											height="20"
+											fill="currentColor"
+											class="bi bi-box-arrow-up me-2"
+											viewBox="0 0 16 16"
+										>
+											<path
+												fill-rule="evenodd"
+												d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1z"
+											/>
+											<path
+												fill-rule="evenodd"
+												d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708z"
+											/>
+										</svg>
+										Поделиться
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="learn_course">
+					<div class="row">
+						<div class="col-lg-3">
+							<h3>Что вы узнаете на курсе?</h3>
+						</div>
+						<div class="col-lg-9">
+							<div class="d-flex aligin-items-center flex-wrap gap-3">
+								<div class="card">
+									<div>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="16"
+											height="16"
+											fill="currentColor"
+											class="bi bi-check2"
+											viewBox="0 0 16 16"
+										>
+											<path
+												d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"
+											/>
+										</svg>
+									</div>
+									<p>Вы узнаете, что такое Stable Diffusion и Automatic1111</p>
+								</div>
+								<div class="card">
+									<div>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="16"
+											height="16"
+											fill="currentColor"
+											class="bi bi-check2"
+											viewBox="0 0 16 16"
+										>
+											<path
+												d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"
+											/>
+										</svg>
+									</div>
+									<p>
+										Познакомитесь с возможностями этой нейросети и узнаете как
+										она может быть применима в профессиональной деятельности,
+										какие преимущества Automatic1111 перед Midjourney, DALL-E и
+										другими онлайн сервисами.
+									</p>
+								</div>
+								<div class="card">
+									<div>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="16"
+											height="16"
+											fill="currentColor"
+											class="bi bi-check2"
+											viewBox="0 0 16 16"
+										>
+											<path
+												d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"
+											/>
+										</svg>
+									</div>
+									<p>
+										По окончании курса Вы уверенно будете владеть работой в
+										самой популярной и востребованной нейросети Automatic1111 и
+										получите новую, востребованную, высокооплачиваемую
+										профессию.
+									</p>
+								</div>
+								<div class="card">
+									<div>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="16"
+											height="16"
+											fill="currentColor"
+											class="bi bi-check2"
+											viewBox="0 0 16 16"
+										>
+											<path
+												d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"
+											/>
+										</svg>
+									</div>
+									<p>
+										Изучая нейросети уже несколько лет, я знаю как получить от
+										этой технологии максимум и адаптировать ее под Ваши
+										конкретные задачи и бизнес-потребности.
+									</p>
+								</div>
+								<div class="card">
+									<div>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="16"
+											height="16"
+											fill="currentColor"
+											class="bi bi-check2"
+											viewBox="0 0 16 16"
+										>
+											<path
+												d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"
+											/>
+										</svg>
+									</div>
+									<p>
+										Этот курс поможет вам интегрировать AI в ваш творческий
+										процесс, дополняя и расширяя ваши навыки в любых графических
+										программах, открывая новые возможности для уникального
+										визуального выражения и увеличивая скорость работы в разы!
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="course_program">
+					<div class="row">
+						<div class="col-lg-3">
+							<h3>Программа курса</h3>
+						</div>
+						<div class="col-lg-9">
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item d-flex aligin-items-center">
+									<div class="col-2">
+										<span class="badge">1 урок</span>
+									</div>
+									<p class="">Знакомство с automatic 1111</p>
+								</li>
+								<li class="list-group-item d-flex aligin-items-center">
+									<div class="col-2">
+										<span class="badge">2 урок</span>
+									</div>
+									<p class="">Требование к железу</p>
+								</li>
+								<li class="list-group-item d-flex aligin-items-center">
+									<div class="col-2">
+										<span class="badge">3 урок</span>
+									</div>
+									<p class="">Локальная установка аutomatic 1111</p>
+								</li>
+								<li class="list-group-item d-flex aligin-items-center">
+									<div class="col-2">
+										<span class="badge">3.1 урок</span>
+									</div>
+									<p class="">Онлайн сервис gpudc.Ru</p>
+								</li>
+								<li class="list-group-item d-flex aligin-items-center">
+									<div class="col-2">
+										<span class="badge bg-secondary">4 урок</span>
+									</div>
+									<p class="">Знакомство с интерфейсом аutomatic 1111</p>
+								</li>
+								<li class="list-group-item d-flex aligin-items-center">
+									<div class="col-2"></div>
+									<p class="">
+										<button
+											class="btn p-0 text-secondary mx-auto text-decoration-underline"
+										>
+											Показать всю программу
+										</button>
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="author_course_leader">
+					<div class="row">
+						<div class="col-lg-3">
+							<h3 class="px-2">Автор и ведущий курса</h3>
+						</div>
+						<div class="col-lg-7">
+							<div class="row">
+								<div class="col-3">
+									<img src="../../img/man.png" />
+								</div>
+								<div class="col">
+									<h3 class="mb-3">Олег Конюков (OreX)</h3>
+									<p>
+										Работает со всеми популярными интерфейсами Stable Diffusion
+										и ведет большой YouTube канал по нейросетям. Грамотно, чётко
+										и последовательно подает материал к изучению (отзывы под его
+										видео скажут вам больше). OreX автор самой большой и самой
+										активной Telegram группы (чата), комьюнити профессионалов,
+										где объединились художники, дизайнеры и любители нейросетей
+										для общения и исследования возможностей искусственного
+										интеллекта.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- slider -->
+		<div
+			class="offcanvas offcanvas-end"
+			data-bs-backdrop="static"
+			tabindex="-1"
+			id="offcanvasExample"
+			aria-labelledby="offcanvasExampleLabel"
+		>
+			<div class="offcanvas-header">
+				<h5 class="offcanvas-title" id="offcanvasExampleLabel">
+					<b>Характеристики</b>
+				</h5>
+				<button
+					type="button"
+					class="btn-close"
+					data-bs-dismiss="offcanvas"
+					aria-label="Close"
+				></button>
+			</div>
+			<div class="offcanvas-body">
+				<div class="course-details">
+					<div class="detail-item">
+						<span class="label">Артикул</span>
+						<span class="dots"></span>
+						<span class="value">245206876</span>
+					</div>
+					<div class="detail-item">
+						<span class="label">Тип курса</span>
+						<span class="dots"></span>
+						<span class="value">Онлайн-курс</span>
+					</div>
+					<div class="detail-item">
+						<span class="label">Продолжительность</span>
+						<span class="dots"></span>
+						<span class="value">2ч</span>
+					</div>
+					<div class="detail-item">
+						<span class="label">Тема</span>
+						<span class="dots"></span>
+						<span class="value">Нейросети</span>
+					</div>
+				</div>
+				<div class="mt-3">
+					<h5><b>Описание</b></h5>
+					<h6 class="mb-3 fw-bold">Почему Automatic?</h6>
+					<p class="mb-4">A1111 самый гибкий инструмент для генерации AI изображений, открывающий новые возможности для любого специалиста. Его гибкость и мощь позволяют создавать уникальные и креативные изображения, которые могут быть использованы в искусстве, дизайне, маркетинге и многих других сферах.</p>
+
+					<h6 class="mb-3 fw-bold">Cтань эффективнее.</h6>
+					<p class="mb-4">Automatic1111 позволит повысить вашу производительность и увеличить ваш доход благодаря внедрению искуственного интелекта в ваш рабочий процесс. Работа, на которую у вас уходил целый день, теперь можно сделать за пару часов используя возможности нейросетей.</p>
+
+					<h6 class="mb-3 fw-bold">Почему сейчас?</h6>
+					<p class="mb-4">Знание нейросетей становится важным критерием эффективной деятельности и всё чаще встречается в списке требований при устройстве на работу. У нас обучаются сотни дизайнеров и художников, которые значительно повысили свои возможности и доход!</p>
+
+					<h6 class="mb-3 fw-bold">Какие возможности откроет для вас Automatic1111: </h6>
+					<p class="mb-4">
+						<ul>
+							<li>
+								Создание      нового контента: нейросети могут генерировать уникальные изображения на      основе текстовых описаний, что позволит очень быстро визуализировать ваши      идеи, создавая потрясающие изображения.
+							</li>
+							<li>
+								Улучшение      качества изображений: automatic1111 может улучшить качество изображений,      увеличить разрешение, добавить детали и восстанавливать старые или      испорченные фотографии.
+							</li>
+							<li>
+								Достраивание      изображения: нейросеть может дорисовать изображение в ширину или высоту,      чтобы получить нужные пропорции изображений без искажений базы.
+							</li>
+						</ul>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 d-flex">
+						<div>
+							<p class="f-title">Покупателям</p>
+							<ul class="navbar-nav">
+								<li class="nav-item">
+									<a class="f-link" href="#">Вопросы и ответы</a>
+								</li>
+								<li class="nav-item">
+									<a class="f-link" href="#">Юридическая информация</a>
+								</li>
+							</ul>
+							<div class="police">
+								<p>© 365skill. Все права защищены.</p>
+								<p>Применяются рекомендательные технологии.</p>
+							</div>
+						</div>
+						<div class="ms-auto">
+							<p class="f-title">Компания</p>
+							<ul class="navbar-nav">
+								<li class="nav-item"><a class="f-link" href="#">О нас</a></li>
+								<li class="nav-item">
+									<a class="f-link" href="#">Пресс-служба</a>
+								</li>
+								<li class="nav-item">
+									<a class="f-link" href="#">Контакты</a>
+								</li>
+								<li class="nav-item">
+									<a class="f-link" href="#">Вакансии</a>
+								</li>
+								<li class="nav-item">
+									<a class="f-link" href="#">Сообщить о мошенничестве</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="float-end">
+							<div class="qr"></div>
+							<div class="f-social-net mt-5">
+								<a href="#"><img src="../../img/icon/vk.png" alt="vk" /></a>
+								<a href="#"><img src="../../img/icon/ok.png" alt="ok" /></a>
+								<a href="#"><img src="../../img/icon/tg.png" alt="tg" /></a>
+								<a href="#"><img src="../../img/icon/yb.png" alt="yb" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- js -->
+		<script src="../../js/main.js"></script>
+		<!-- bootstrap cdn -->
+		<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
