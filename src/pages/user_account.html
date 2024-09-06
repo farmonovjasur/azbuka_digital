@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap cdn -->
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+  <!-- css file -->
+  <link rel="stylesheet" href="../../css/main.css" />
+  <title>Contacts</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">365skill</a>
+        <div class="burger_menu">
+          <button class="burger" onclick="toggleSidebar()">
+            <span></span>
+          </button>
+        </div>
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span>Войти</span>
+        </button> -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex" role="search">
+            <input class="search form-control me-2" type="search" placeholder="Найти на 365skill" aria-label="Search" />
+          </form>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="../../img/icon/icon7.png" alt="user" />
+                <p>Избранное</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="../../img/icon/user.png" alt="user" />
+                <p>Войти</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="../../img/icon/cart.png" alt="cart" />
+                <p>Корзина</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- user account content -->
+  <section style="padding: 40px 0 100px 0;">
+    <div class="container">
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link nav-tab-link active" id="main-tab" data-bs-toggle="tab" href="#main" role="tab"
+            aria-controls="main" aria-selected="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="21" viewBox="0 0 18 21" fill="none">
+              <g clip-path="url(#clip0_136_13376)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8.455 0.214848C8.60304 0.0770781 8.79777 0.000488281 9 0.000488281C9.20223 0.000488281 9.39696 0.0770781 9.545 0.214848L17.775 8.02785C17.8457 8.09439 17.9021 8.17463 17.9408 8.26369C17.9795 8.35275 17.9996 8.44875 18 8.54585V20.2668C18 20.6718 17.655 20.9998 17.229 20.9998H12.086C11.66 20.9998 11.314 20.6718 11.314 20.2668V14.6508H6.686V20.2668C6.686 20.6718 6.34 20.9998 5.914 20.9998H0.771C0.345 20.9998 0 20.6718 0 20.2668V8.54685C0 8.35185 0.081 8.16585 0.226 8.02785L8.455 0.214848ZM1.543 8.84985V19.5348H5.143V13.9188C5.143 13.5138 5.488 13.1858 5.914 13.1858H12.086C12.512 13.1858 12.857 13.5138 12.857 13.9188V19.5348H16.457V8.84985L9 1.76885L1.543 8.84885V8.84985Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_136_13376">
+                  <rect width="18" height="21" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            Главная
+          </a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link nav-tab-link" id="featured-tab" data-bs-toggle="tab" href="#featured" role="tab"
+            aria-controls="featured" aria-selected="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="19" viewBox="0 0 22 19" fill="none">
+              <g clip-path="url(#clip0_136_13380)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M6.62 1.54C4.008 1.54 2.037 3.493 2.037 5.99C2.037 7.488 3.028 9.27 4.815 11.318C6.458 13.2 8.653 15.179 11 17.212C13.347 15.178 15.542 13.2 17.185 11.316C18.972 9.269 19.963 7.487 19.963 5.988C19.963 3.492 17.993 1.54 15.379 1.54C13.947 1.54 12.504 2.202 11.579 3.268C11.507 3.35104 11.418 3.41763 11.318 3.46328C11.218 3.50892 11.1094 3.53254 10.9995 3.53254C10.8896 3.53254 10.781 3.50892 10.681 3.46328C10.581 3.41763 10.492 3.35104 10.42 3.268C9.496 2.203 8.053 1.54 6.62 1.54ZM0.5 5.99C0.5 2.601 3.2 0 6.62 0C8.23384 0.011941 9.78915 0.60601 11 1.673C12.2109 0.606088 13.7662 0.0120309 15.38 0C18.8 0 21.5 2.602 21.5 5.99C21.5 8.095 20.156 10.252 18.342 12.332C16.501 14.442 14.027 16.634 11.502 18.814C11.3627 18.9344 11.1847 19.0007 11.0005 19.0007C10.8163 19.0007 10.6383 18.9344 10.499 18.814C7.973 16.634 5.499 14.443 3.659 12.332C1.843 10.252 0.5 8.096 0.5 5.99Z"
+                  fill="black" />
+              </g>
+            </svg>
+            Избранное
+          </a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link nav-tab-link" id="purchases-tab" data-bs-toggle="tab" href="#purchases" role="tab"
+            aria-controls="purchases" aria-selected="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="21" viewBox="0 0 18 21" fill="none">
+              <g clip-path="url(#clip0_136_13384)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.00333344 6.7C-0.0576666 5.779 0.726333 5 1.71433 5H16.2863C17.2723 5 18.0563 5.775 17.9973 6.694L17.1873 19.494C17.1343 20.34 16.3843 21 15.4773 21H2.57133C1.66533 21 0.916333 20.343 0.860333 19.5L0.00333344 6.7ZM1.71433 6.371C1.57433 6.371 1.46133 6.483 1.47033 6.614L2.32733 19.414C2.33533 19.534 2.44233 19.629 2.57233 19.629H15.4763C15.6063 19.629 15.7133 19.534 15.7213 19.413L16.5313 6.613C16.5383 6.483 16.4273 6.371 16.2863 6.371H1.71433Z"
+                  fill="black" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M4 4.941C4 2.212 6.239 0 9 0C11.761 0 14 2.212 14 4.941V7.294C13.9995 7.38724 13.9806 7.47946 13.9444 7.5654C13.9083 7.65134 13.8555 7.72932 13.7892 7.79488C13.7229 7.86044 13.6444 7.91229 13.558 7.94749C13.4717 7.98268 13.3792 8.00053 13.286 8C13.1927 8.00066 13.1001 7.98291 13.0137 7.94778C12.9272 7.91264 12.8485 7.8608 12.7821 7.79523C12.7157 7.72966 12.6629 7.65164 12.6267 7.56563C12.5904 7.47963 12.5715 7.38732 12.571 7.294V4.941C12.571 2.991 10.972 1.411 9 1.411C7.028 1.411 5.429 2.991 5.429 4.941V7.294C5.42848 7.38732 5.40956 7.47963 5.37333 7.56563C5.3371 7.65164 5.28427 7.72966 5.21787 7.79523C5.15146 7.8608 5.07278 7.91264 4.98632 7.94778C4.89986 7.98291 4.80732 8.00066 4.714 8C4.62076 8.00053 4.52833 7.98268 4.44199 7.94749C4.35565 7.91229 4.27708 7.86044 4.21078 7.79488C4.14448 7.72932 4.09174 7.65134 4.05557 7.5654C4.01941 7.47946 4.00052 7.38724 4 7.294V4.941Z"
+                  fill="black" />
+              </g>
+            </svg>
+            Покупки
+          </a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link nav-tab-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab"
+            aria-controls="profile" aria-selected="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="21" viewBox="0 0 22 21" fill="none">
+              <g clip-path="url(#clip0_136_13389)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M3.98432 15.405C2.31932 16.555 1.53432 17.921 1.53432 18.919C1.53432 19.06 1.56232 19.14 1.58832 19.186C1.61132 19.228 1.65232 19.277 1.75032 19.332C1.98032 19.46 2.46332 19.579 3.39832 19.579H18.6023C19.5373 19.579 20.0193 19.459 20.2503 19.332C20.3174 19.3002 20.3737 19.2494 20.4123 19.186C20.4525 19.103 20.4707 19.0111 20.4653 18.919C20.4653 17.921 19.6803 16.556 18.0183 15.405C16.3853 14.275 13.9913 13.421 11.0063 13.421C8.01632 13.421 5.61832 14.274 3.98432 15.405ZM3.06532 14.266C4.97532 12.945 7.69832 12 11.0063 12C14.3093 12 17.0283 12.945 18.9363 14.266C20.8163 15.566 22.0003 17.306 22.0003 18.919C22.0003 19.228 21.9403 19.544 21.7763 19.839C21.6083 20.139 21.3553 20.376 21.0383 20.551C20.4383 20.884 19.6053 21 18.6023 21H3.39832C2.39532 21 1.56232 20.884 0.96232 20.551C0.654142 20.388 0.398313 20.1411 0.22432 19.839C0.0715382 19.5568 -0.0056289 19.2399 0.000319645 18.919C0.000319645 17.305 1.18532 15.566 3.06532 14.266ZM6.00032 4.965C5.98832 2.153 8.33332 0 11.0003 0C13.6643 0 16.0003 2.108 16.0003 4.943C16.0003 7.786 13.6993 10 11.0003 10C8.30432 10 6.00132 7.79 6.00032 4.965ZM11.0003 1.429C9.07732 1.429 7.42032 2.985 7.42932 4.96V4.964C7.42932 6.99 9.08332 8.57 11.0003 8.57C12.9153 8.57 14.5713 6.99 14.5713 4.942C14.5713 2.947 12.9273 1.428 11.0003 1.428V1.429Z"
+                  fill="black" />
+              </g>
+            </svg>
+            Профиль
+          </a>
+        </li>
+      </ul>
+      <!-- section top -->
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="main" role="tabpanel" aria-labelledby="main-tab">
+          <div class="row user_contact_top-cards gap-3 gap-lg-0 gap-md-3">
+            <div class="col-lg-4">
+              <div class="card">
+                <button class="btn border-0 p-0 bell">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="21" viewBox="0 0 19 21" fill="none">
+                    <g clip-path="url(#clip0_136_13469)">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M10.198 1.74499C10.0102 1.56505 9.76011 1.4646 9.5 1.4646C9.23989 1.4646 8.98983 1.56505 8.802 1.74499C8.685 1.85499 8.601 1.98699 8.547 2.12799L8.417 2.46599L8.07 2.56799C5.88 3.21199 4.092 5.38799 4.092 8.72099C4.092 11.156 3.606 12.675 2.574 13.811C2.409 13.993 2.008 14.367 1.756 14.601L1.737 14.618L1.735 14.621L1.729 14.626C1.65415 14.6958 1.57948 14.7658 1.505 14.836L1.462 14.881V16.877H17.538V14.88L17.494 14.834L17.432 14.774C17.398 14.743 17.355 14.704 17.306 14.657L17.277 14.631L17.253 14.608C16.9694 14.3493 16.6936 14.0821 16.426 13.807C15.396 12.667 14.908 11.148 14.908 8.71999C14.908 5.39699 13.117 3.21499 10.928 2.56799L10.582 2.46599L10.453 2.12799C10.3979 1.98249 10.3107 1.85126 10.198 1.74399V1.74499ZM18.539 13.812L19 14.284V18.342H13.427C13.0887 19.1845 12.4881 19.8956 11.714 20.37C10.355 21.21 8.645 21.21 7.286 20.37C6.427 19.84 5.826 19.212 5.513 18.342H0V14.284L0.46 13.811L0.462 13.81C0.504 13.767 0.607 13.671 0.713 13.572L0.737 13.55C1.017 13.29 1.376 12.954 1.493 12.825C2.186 12.062 2.631 10.961 2.631 8.72099C2.631 4.97199 4.608 2.22299 7.341 1.26499C7.461 1.05399 7.612 0.856988 7.796 0.682988C8.753 -0.227012 10.246 -0.227012 11.203 0.682988C11.387 0.856988 11.54 1.05499 11.659 1.26699C14.389 2.22799 16.369 4.98099 16.369 8.72099C16.369 10.951 16.814 12.056 17.509 12.824C17.627 12.954 17.987 13.292 18.265 13.552M7.151 18.342C7.354 18.621 7.644 18.871 8.053 19.123C8.942 19.673 10.058 19.673 10.948 19.123C11.285 18.914 11.563 18.648 11.776 18.342H7.151Z"
+                        fill="black" />
+                    </g>
+                  </svg>
+                </button>
+                <div class="card_items">
+                  <div class="card_title">
+                    <h2 class="ellipse">И</h2>
+                    <h4><b>Иван</b></h4>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                      <span class="text-secondary">
+                        Телефон: <span class="text-black">+7 900 500-10-10</span>
+                      </span>
+                    </div>
+                    <div>
+                      <button style="border-bottom: 2px dashed !important;"
+                        class="btn border-0 p-0 text-secondary rounded-0">
+                        Выйти
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card_items">
+                  <div class="card_title">
+                    <div class="ellipse">
+                      <img src="../../img/img2.png">
+                    </div>
+                    <h4><b>Последняя покупка</b></h4>
+                  </div>
+                  <div>
+                    <span class="text-secondary">
+                      Посмотреть страницу товара
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card_items">
+                  <div class="card_title">
+                    <div class="ellipse">
+                      <img src="../../img/img3.png">
+                    </div>
+                    <h4><b>Последняя покупка</b></h4>
+                  </div>
+                  <div>
+                    <span class="text-secondary">
+                      Посмотреть страницу товара
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row user_contact_bottom_cards">
+            <div class="col-lg-3">
+              <div class="card">
+                <h4><b>Способы оплаты</b></h4>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span>SberPay •• 6600</span>
+                  <div>
+                    <img src="../../img/icon/icon8.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="card">
+                <h4><b>Мой баланс</b></h4>
+                <p>
+                  <img src="../../img/icon/icon9.png">
+                  <span class="ms-2">2630 ₽</span>
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="card">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <h4><b>Избранное</b></h4>
+                    <p>1 в наличии</p>
+                  </div>
+                  <div>
+                    <img class="user_contact_bottom_cards-img" src="../../img/product6.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="card">
+                <div></div>
+                <div>
+                  <h4><b>Избранное</b></h4>
+                  <p>1 в наличии</p>
+                </div>
+                <div>
+                  <img style="right: 30px; z-index: 3; bottom: 26%;"
+                    class="position-absolute user_contact_bottom_cards-img" src="../../img/product1.png">
+                  <img style="right: 60px; z-index: 2; bottom: 26%;"
+                    class="position-absolute user_contact_bottom_cards-img" src="../../img/product2.png">
+                  <img style="right: 90px; z-index: 1; bottom: 26%;"
+                    class="position-absolute user_contact_bottom_cards-img" src="../../img/product3.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- tab pane 2 -->
+      <div class="tab-pane fade" id="featured" role="tabpanel" aria-labelledby="featured-tab">
+        <h3><b>Избранное</b></h3>
+        <div class="d-flex align-items-center my-3">
+          <div class="dropdown me-4">
+            <button class="btn border-0 p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              По дате добавления
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-down ms-2" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Снова в наличии
+            </label>
+          </div>
+        </div>
+        <div class="product justify-content-start">
+          <div class="card">
+            <a href="product.html" class="card-link">
+              <button class="chosen">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                  class="bi bi-heart-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
+                </svg>
+              </button>
+              <div class="discount">
+                <span class="col_1">-84%</span>
+                <span class="col_2">
+                  <img src="../../img/icon/like.png" alt="like" />
+                  Хорошая цена
+                </span>
+              </div>
+              <img class="card-img-top" src="../../img/product1.png" alt="product" />
+              <div class="card_top">
+                <h3 class="card_price">44 000 ₽ <span>94 000</span></h3>
+                <p class="card_text my-1">
+                  3D-дженералист <span>/ 12 месяцев</span>
+                </p>
+                <p class="card_text">
+                  <img src="../../img/icon/star.png" alt="star" />
+                  4.8
+                  <span>• 812 оценок</span>
+                </p>
+              </div>
+            </a>
+            <div class="card_bottom">
+              <button class="btn add-to-basket">
+                <img src="../../img/icon/cart.png" />
+                В корзину
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- tab pane 3 -->
+      <div class="tab-pane fade" id="purchases" role="tabpanel" aria-labelledby="purchases-tab">
+
+        <ul class="nav purchase_check_tabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="tb-1" data-bs-toggle="tab" href="#tab_panel_1" role="tab" aria-controls="tab_panel_1" aria-selected="true">
+              <h3><b>Покупки</b></h3>
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="tb-2" data-bs-toggle="tab" href="#tab_panel_2" role="tab" aria-controls="tab_panel_2" aria-selected="false">
+              <h3><b>Чеки</b></h3>
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+        <div class="tab-pane fade show active" id="tab_panel_1" role="tabpanel" aria-labelledby="tb1">
+          <div class="d-flex align-items-center flex-wrap my-3">
+            <div class="dropdown me-4">
+              <button class="btn border-0 p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Все товары
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-chevron-down ms-2" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                </svg>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+            <div class="ms-auto" style="width: 460px;">
+              <form action="#">
+                <div class="input-group">
+                  <input type="search" class="form-control border-0" placeholder="Название, артикул, цвет">
+                  <button class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <g clip-path="url(#clip0_136_11649)">
+                        <path
+                          d="M10.731 9.47298L10.457 9.81598C11.3848 8.74018 11.8948 7.36661 11.894 5.94598C11.8938 4.77006 11.5449 3.6206 10.8915 2.64294C10.238 1.66527 9.30938 0.903315 8.22293 0.4534C7.13648 0.0034855 5.94102 -0.114181 4.7877 0.115279C3.63439 0.344738 2.575 0.91102 1.7435 1.74252C0.911996 2.57403 0.345715 3.63341 0.116255 4.78673C-0.113204 5.94004 0.00446206 7.1355 0.454377 8.22195C0.904291 9.3084 1.66625 10.2371 2.64391 10.8905C3.62157 11.5439 4.77103 11.8928 5.94696 11.893C7.36759 11.8938 8.74116 11.3838 9.81696 10.456L9.33396 10.83L13.956 15.335C14.1397 15.5098 14.385 15.6052 14.6386 15.6006C14.8922 15.596 15.1338 15.4917 15.3111 15.3103C15.4884 15.1289 15.5871 14.885 15.586 14.6314C15.5848 14.3777 15.4839 14.1348 15.305 13.955L10.731 9.47298ZM5.94696 10.063C5.40617 10.0636 4.87056 9.95759 4.37082 9.75091C3.87108 9.54424 3.41703 9.24099 3.03468 8.85855C2.65233 8.4761 2.3492 8.02198 2.14264 7.52219C1.93608 7.0224 1.83017 6.48677 1.83096 5.94598C1.8303 5.40527 1.93631 4.86975 2.14293 4.37008C2.34954 3.8704 2.6527 3.4164 3.03504 3.03406C3.41737 2.65172 3.87138 2.34857 4.37105 2.14195C4.87073 1.93534 5.40625 1.82932 5.94696 1.82998C6.48775 1.82919 7.02338 1.93511 7.52317 2.14166C8.02295 2.34822 8.47708 2.65136 8.85952 3.03371C9.24197 3.41606 9.54521 3.87011 9.75189 4.36984C9.95857 4.86958 10.0646 5.40519 10.064 5.94598C10.0647 6.48685 9.9588 7.02257 9.75218 7.52242C9.54556 8.02227 9.24233 8.47644 8.85988 8.8589C8.47742 9.24135 8.02325 9.54458 7.5234 9.7512C7.02354 9.95782 6.48783 10.0638 5.94696 10.063Z"
+                          fill="#909090" />
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="product justify-content-start">
+            <div class="card">
+              <a href="product.html" class="card-link">
+                <button class="chosen">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    class="bi bi-heart-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
+                  </svg>
+                </button>
+                <div class="discount">
+                  <span class="col_1">-84%</span>
+                  <span class="col_2">
+                    <img src="../../img/icon/like.png" alt="like" />
+                    Хорошая цена
+                  </span>
+                </div>
+                <img class="card-img-top" src="../../img/product1.png" alt="product" />
+                <div class="card_top">
+                  <h3 class="card_price">44 000 ₽ <span>94 000</span></h3>
+                  <p class="card_text my-1">
+                    3D-дженералист <span>/ 12 месяцев</span>
+                  </p>
+                  <p class="card_text">
+                    <img src="../../img/icon/star.png" alt="star" />
+                    4.8
+                    <span>• 812 оценок</span>
+                  </p>
+                </div>
+              </a>
+              <div class="card_bottom">
+                <button class="btn add-to-basket">
+                  <img src="../../img/icon/cart.png" />
+                  В корзину
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <a href="product.html" class="card-link">
+                <button class="chosen">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    class="bi bi-heart-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
+                  </svg>
+                </button>
+                <div class="discount">
+                  <span class="col_1">-84%</span>
+                  <span class="col_2">
+                    <img src="../../img/icon/like.png" alt="like" />
+                    Хорошая цена
+                  </span>
+                </div>
+                <img class="card-img-top" src="../../img/product1.png" alt="product" />
+                <div class="card_top">
+                  <h3 class="card_price">44 000 ₽ <span>94 000</span></h3>
+                  <p class="card_text my-1">
+                    3D-дженералист <span>/ 12 месяцев</span>
+                  </p>
+                  <p class="card_text">
+                    <img src="../../img/icon/star.png" alt="star" />
+                    4.8
+                    <span>• 812 оценок</span>
+                  </p>
+                </div>
+              </a>
+              <div class="card_bottom">
+                <button class="btn add-to-basket">
+                  <img src="../../img/icon/cart.png" />
+                  В корзину
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <a href="product.html" class="card-link">
+                <button class="chosen">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    class="bi bi-heart-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
+                  </svg>
+                </button>
+                <div class="discount">
+                  <span class="col_1">-84%</span>
+                  <span class="col_2">
+                    <img src="../../img/icon/like.png" alt="like" />
+                    Хорошая цена
+                  </span>
+                </div>
+                <img class="card-img-top" src="../../img/product1.png" alt="product" />
+                <div class="card_top">
+                  <h3 class="card_price">44 000 ₽ <span>94 000</span></h3>
+                  <p class="card_text my-1">
+                    3D-дженералист <span>/ 12 месяцев</span>
+                  </p>
+                  <p class="card_text">
+                    <img src="../../img/icon/star.png" alt="star" />
+                    4.8
+                    <span>• 812 оценок</span>
+                  </p>
+                </div>
+              </a>
+              <div class="card_bottom">
+                <button class="btn add-to-basket">
+                  <img src="../../img/icon/cart.png" />
+                  В корзину
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <a href="product.html" class="card-link">
+                <button class="chosen">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    class="bi bi-heart-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
+                  </svg>
+                </button>
+                <div class="discount">
+                  <span class="col_1">-84%</span>
+                  <span class="col_2">
+                    <img src="../../img/icon/like.png" alt="like" />
+                    Хорошая цена
+                  </span>
+                </div>
+                <img class="card-img-top" src="../../img/product1.png" alt="product" />
+                <div class="card_top">
+                  <h3 class="card_price">44 000 ₽ <span>94 000</span></h3>
+                  <p class="card_text my-1">
+                    3D-дженералист <span>/ 12 месяцев</span>
+                  </p>
+                  <p class="card_text">
+                    <img src="../../img/icon/star.png" alt="star" />
+                    4.8
+                    <span>• 812 оценок</span>
+                  </p>
+                </div>
+              </a>
+              <div class="card_bottom">
+                <button class="btn add-to-basket">
+                  <img src="../../img/icon/cart.png" />
+                  В корзину
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <a href="product.html" class="card-link">
+                <button class="chosen">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    class="bi bi-heart-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
+                  </svg>
+                </button>
+                <div class="discount">
+                  <span class="col_1">-84%</span>
+                  <span class="col_2">
+                    <img src="../../img/icon/like.png" alt="like" />
+                    Хорошая цена
+                  </span>
+                </div>
+                <img class="card-img-top" src="../../img/product1.png" alt="product" />
+                <div class="card_top">
+                  <h3 class="card_price">44 000 ₽ <span>94 000</span></h3>
+                  <p class="card_text my-1">
+                    3D-дженералист <span>/ 12 месяцев</span>
+                  </p>
+                  <p class="card_text">
+                    <img src="../../img/icon/star.png" alt="star" />
+                    4.8
+                    <span>• 812 оценок</span>
+                  </p>
+                </div>
+              </a>
+              <div class="card_bottom">
+                <button class="btn add-to-basket">
+                  <img src="../../img/icon/cart.png" />
+                  В корзину
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="tab_panel_2" role="tabpanel" aria-labelledby="tb2">
+          <table class="table">
+              <tbody>
+                <tr>
+                  <td>12.05.2024</td>
+                  <td>Оплачено</td>
+                  <td>100 RUB</td>
+                  <td></td>
+                  <td>
+                    <div class="float-end">
+                      <button class="btn border-0" type="button">
+                        <img src="../../img/icon/icon10.png">
+                      </button>
+                      <button class="btn border-0" type="button">
+                        <img src="../../img/icon/icon11.png">
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>12.05.2024</td>
+                  <td>Оплачено</td>
+                  <td>1 896 RUB</td>
+                  <td></td>
+                  <td>
+                    <div class="float-end">
+                      <button class="btn border-0" type="button">
+                        <img src="../../img/icon/icon10.png">
+                      </button>
+                      <button class="btn border-0" type="button">
+                        <img src="../../img/icon/icon11.png">
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>12.05.2024</td>
+                  <td>Оплачено</td>
+                  <td>1 607 RUB</td>
+                  <td></td>
+                  <td>
+                    <div class="float-end">
+                      <button class="btn border-0" type="button">
+                        <img src="../../img/icon/icon10.png">
+                      </button>
+                      <button class="btn border-0" type="button">
+                        <img src="../../img/icon/icon11.png">
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>12.05.2024</td>
+                  <td>Оплачено</td>
+                  <td>100 RUB</td>
+                  <td></td>
+                  <td>
+                    <div class="float-end">
+                      <button class="btn border-0" type="button">
+                        <img src="../../img/icon/icon10.png">
+                      </button>
+                      <button class="btn border-0" type="button">
+                        <img src="../../img/icon/icon11.png">
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>12.05.2024</td>
+                  <td>Оплачено</td>
+                  <td>2 345 RUB</td>
+                  <td></td>
+                  <td>
+                    <div class="float-end">
+                      <button class="btn border-0" type="button">
+                        <img src="../../img/icon/icon10.png">
+                      </button>
+                      <button class="btn border-0" type="button">
+                        <img src="../../img/icon/icon11.png">
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- tab pane 4 -->
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <h3 class="mb-3"><b>Личные данные</b></h3>
+      <div>
+        <div class="card_items">
+          <div class="card_title">
+            <h2 class="ellipse">И</h2>
+            <h4><b>Иван</b>
+              <button class="btn border-0 p-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <g clip-path="url(#clip0_136_13311)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.407 0.257863C12.5737 0.0926766 12.7988 0 13.0335 0C13.2682 0 13.4933 0.0926766 13.66 0.257863L15.74 2.33786C15.8224 2.42007 15.8878 2.51772 15.9324 2.62522C15.977 2.73273 15.9999 2.84797 15.9999 2.96436C15.9999 3.08075 15.977 3.196 15.9324 3.3035C15.8878 3.41101 15.8224 3.50866 15.74 3.59086L14.113 5.21686L10.781 1.88386L12.407 0.257863ZM0 12.6649L9.83 2.83486L13.163 6.16786L3.333 15.9979H0V12.6649Z" fill="#BDBDCB"/>
+                  </g>
+                </svg>
+              </button>
+            </h4>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="d-flex flex-column">
+              <span class="text-secondary">
+                Телефон:
+              </span>
+              <span class="text-black">+7 900 500-10-10</span>
+            </div>
+            <div class="d-flex flex-column ms-5">
+              <span class="text-secondary">Пол:</span>
+              <div class="d-flex align-items-center">
+                <div class="form-check me-5">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Муж
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Жен
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="ms-lg-auto ms-md-auto">
+              <button style="border-bottom: 2px dashed !important;"
+                class="btn border-0 p-0 text-secondary rounded-0">
+                Выйти
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row gap-3" style="margin-top: 100px;">
+        <h3 class="mb-3"><b>Способы оплаты</b></h3>
+        <div class="col-lg-3">
+          <div class="card border-0" style="width: 303px; height: 165px; padding: 20px;">
+            <div class="d-flex align-items-center justify-content-between">
+              <p>
+                <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7" fill="none">
+                  <path d="M3.75436 6.79633C3.45484 7.06789 2.96827 7.06789 2.66875 6.79633L0.25872 4.61091C-0.0862401 4.29809 -0.0862401 3.79193 0.25872 3.47912C0.605168 3.16497 1.16798 3.16497 1.51443 3.47912L3.21156 5.01806L8.48554 0.23562C8.83199 -0.0785402 9.39481 -0.0785402 9.74126 0.23562C10.0862 0.54843 10.0862 1.05459 9.74126 1.3674L3.75436 6.79633Z" fill="#3B4DBE"/>
+                </svg>
+                Основной способ
+              </p>
+              <button class="btn border-0 p-0" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <circle cx="13" cy="13" r="13" fill="white"/>
+                  <path d="M18.7263 7.27368C19.0912 7.63859 19.0912 8.23023 18.7263 8.59514L8.59514 18.7263C8.23023 19.0912 7.63859 19.0912 7.27368 18.7263C6.90877 18.3614 6.90877 17.7698 7.27368 17.4049L17.4049 7.27368C17.7698 6.90877 18.3614 6.90877 18.7263 7.27368Z" fill="#242424"/>
+                  <path d="M18.7263 18.7263C18.3614 19.0912 17.7698 19.0912 17.4049 18.7263L7.27369 8.59514C6.90877 8.23023 6.90878 7.63859 7.27369 7.27368C7.6386 6.90877 8.23023 6.90877 8.59514 7.27368L18.7263 17.4049C19.0912 17.7698 19.0912 18.3614 18.7263 18.7263Z" fill="#242424"/>
+                </svg>
+              </button>
+            </div>
+            <div class="d-flex align-items-center justify-content-between" style="margin-top: 78px;">
+              <span>SberPay •• 6600</span>
+              <div>
+                <img src="../../img/icon/icon8.png">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card" style="width: 303px; height: 165px; padding: 20px;">
+            <div class="d-flex align-items-center m-auto flex-column">
+              <p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20" fill="none">
+                <g clip-path="url(#clip0_136_13333)">
+                  <path d="M24 1H4C2.34315 1 1 2.34315 1 4V16C1 17.6569 2.34315 19 4 19H24C25.6569 19 27 17.6569 27 16V4C27 2.34315 25.6569 1 24 1Z" stroke="#242424" stroke-width="1.5"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7 5.75C14.7 5.55109 14.621 5.36032 14.4803 5.21967C14.3397 5.07902 14.1489 5 13.95 5C13.7511 5 13.5603 5.07902 13.4197 5.21967C13.279 5.36032 13.2 5.55109 13.2 5.75V9.3H9.75C9.55109 9.3 9.36032 9.37902 9.21967 9.51967C9.07902 9.66032 9 9.85109 9 10.05C9 10.2489 9.07902 10.4397 9.21967 10.5803C9.36032 10.721 9.55109 10.8 9.75 10.8H13.2V14.25C13.2 14.4489 13.279 14.6397 13.4197 14.7803C13.5603 14.921 13.7511 15 13.95 15C14.1489 15 14.3397 14.921 14.4803 14.7803C14.621 14.6397 14.7 14.4489 14.7 14.25V10.8H18.25C18.4489 10.8 18.6397 10.721 18.7803 10.5803C18.921 10.4397 19 10.2489 19 10.05C19 9.85109 18.921 9.66032 18.7803 9.51967C18.6397 9.37902 18.4489 9.3 18.25 9.3H14.7V5.75Z" fill="#242424"/>
+                </g>
+              </svg>
+              </p>
+              <p>Привязать карту</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card" style="width: 303px; height: 165px; padding: 20px;">
+            <div class="d-flex align-items-center m-auto flex-column">
+              <p>
+                <img src="../../img/icon/icon12.png">
+              </p>
+              <p>Привязать счет СБП</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3"></div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+
+
+  <!--footer  -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex">
+          <div>
+            <p class="f-title">Покупателям</p>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="f-link" href="#">Вопросы и ответы</a>
+              </li>
+              <li class="nav-item">
+                <a class="f-link" href="#">Юридическая информация</a>
+              </li>
+            </ul>
+            <div class="police">
+              <p>© 365skill. Все права защищены.</p>
+              <p>Применяются рекомендательные технологии.</p>
+            </div>
+          </div>
+          <div class="ms-auto">
+            <p class="f-title">Компания</p>
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="f-link" href="#">О нас</a></li>
+              <li class="nav-item">
+                <a class="f-link" href="#">Пресс-служба</a>
+              </li>
+              <li class="nav-item">
+                <a class="f-link" href="contact.html">Контакты</a>
+              </li>
+              <li class="nav-item">
+                <a class="f-link" href="#">Вакансии</a>
+              </li>
+              <li class="nav-item">
+                <a class="f-link" href="#">Сообщить о мошенничестве</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="float-end">
+            <div class="qr"></div>
+            <div class="f-social-net mt-5">
+              <a href="#"><img src="../../img/icon/vk.png" alt="vk" /></a>
+              <a href="#"><img src="../../img/icon/ok.png" alt="ok" /></a>
+              <a href="#"><img src="../../img/icon/tg.png" alt="tg" /></a>
+              <a href="#"><img src="../../img/icon/yb.png" alt="yb" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--main-->
+  <script src="../../js/main.js"></script>
+  <!-- bootstrap cdn -->
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

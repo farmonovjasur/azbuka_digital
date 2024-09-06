@@ -470,12 +470,36 @@ main {
   margin: 100px 0;
 }
 
-/*  */
-
 .author_course_leader .col-lg-7 img {
   object-fit: contain;
   width: 100%;
 }
+
+/* cart pages */
+
+#basket-content {
+  padding: 100px 0 200px 0;
+}
+
+.cart_empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart_btn {
+  background: linear-gradient(132deg, rgba(59,77,190,1) 0%, rgba(5,137,220,1) 100%);
+  width: 280px;
+  color: #fff;
+}
+
+.cart_btn:hover {
+  color: #ccc;
+}
+
+
 /* footer */
 .f-title {
   font-weight: 600;
@@ -520,7 +544,109 @@ main {
   font-size: 14px;
 }
 
-/* directory/instagram end*/
+/* user account pages */
+
+.nav-tabs {
+  --bs-nav-tabs-border-width: 0;
+  gap: 80px;
+  margin-bottom: 40px;
+}
+
+.fade:not(.show) {
+  display: none;
+}
+
+.nav-tab-link {
+  color: #242424;
+}
+
+.nav-tab-link:hover svg path {
+  fill: var(--primary);
+}
+
+.nav-tab-link svg path{
+  fill: #242424;
+}
+
+.nav-tab-link.active{
+  color: var(--primary) !important;
+}
+
+.nav-tab-link.active svg path{
+  fill: var(--primary);
+}
+
+
+.user_contact_cards {
+  padding: 40px 0 70px 0;
+}
+
+.user_contact_top-cards .card {
+  border: 0;
+  padding: 20px;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
+  height: 230px;
+  position: relative;
+}
+
+.user_contact_top-cards .card .bell {
+  position: absolute;
+  right: 16px;
+}
+
+.card_title {
+  display: flex;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+
+.card_items .ellipse {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #F1F1F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #C8C8D1;
+  margin-right: 20px;
+}
+
+.ellipse img {
+  object-fit: contain;
+}
+
+.user_contact_bottom_cards .card{
+  border: 0;
+  box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
+  margin-top: 30px;
+  padding: 30px;
+}
+
+.user_contact_bottom_cards-img {
+  object-fit: cover;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.purchase_check_tabs .nav-link {
+  color: #909090;
+}
+
+.purchase_check_tabs .nav-link:hover {
+  color: #242424;
+}
+
+.purchase_check_tabs .nav-link.active {
+  color: #242424;
+}
+
+
+/* footer */
 
 footer {
   padding: 30px 0 40px 0;

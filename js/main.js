@@ -80,16 +80,3 @@ function navigateBack(containerId) {
     }
 }
 
-
-
-// Chosen button
-function chosenAdd() {
-	if (addChosen.style.color === 'red') {
-		addChosen.style.color = '' 
-	} else {
-		addChosen.style.color = 'red'
-	}
-}
-
-addChosen.addEventListener('click', chosenAdd)
-
